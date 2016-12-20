@@ -9,13 +9,13 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        size = len(s)
-        if(size == 0):
+        self.size = len(s)
+        if(self.size == 0):
             return(True)
-        oldString = s.lower()
-        oldString = re.sub(r'[^a-zA-Z0-9]', '', oldString) #only alphanumerical characters
-        newString = oldString[::-1] #reverse the string
-        if(newString == oldString):
+        self.oldString = s.lower()
+        self.oldString = re.sub(r'[^a-zA-Z0-9]', '', self.oldString) #only alphanumerical characters
+        self.newString = self.oldString[::-1] #reverse the string
+        if(self.newString == self.oldString):
             return True
         return False
 
